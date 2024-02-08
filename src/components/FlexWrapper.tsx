@@ -13,4 +13,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     justify-content: ${props => props.justify || "flex-start"};
     align-items: ${props => props.align || "stretch"};
     flex-wrap: ${props => props.wrap || "nowrap"};
+    height: 100%;  // добавляем 100% от родителя (весь экран сделали). Так как нас не устраивает, что высота было по контент + все элементы по вертикали выровнились по центру
 `
