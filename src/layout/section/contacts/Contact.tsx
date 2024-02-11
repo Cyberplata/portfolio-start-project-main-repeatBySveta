@@ -45,7 +45,7 @@ const Field = styled.input`
     border: 1px solid ${theme.colors.borderColor};
     padding: 7px 15px;
 
-    font-family: 'Poppins';  // Нужно указывать, так как браузер перебивает этот шрифт
+    font-family: 'Poppins', sans-serif;  // Нужно указывать, так как браузер перебивает этот шрифт
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.05em;
