@@ -5,6 +5,10 @@ export const theme = {
         secondaryBg: "#252527",
         accent: "#7572D5",
 
-        font: "#FFFFFF"
+        font: "#FFFFFF",
+
+        borderColor: "#4A4A4A",  // Добавили общий цвет для границы
+
+        placeholderColor: "#495057"
     }
 }
