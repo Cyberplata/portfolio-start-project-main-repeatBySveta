@@ -31,8 +31,8 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    max-width: 540px;
-    width: 100%;
+    width: 330px;
+    flex-grow: 1;
 
     ${Link} {
         padding: 10px 0; // Сделали линию от начала текста
@@ -41,27 +41,14 @@ const StyledWork = styled.div`
             margin-left: 20px;
         }
     }
+    
+    @media ${theme.media.desktop} {
+        max-width: 540px; // Максимальная ширина будет ограничиваться только на desktop, когда ширина будет больше 1140px
+    }
 `
 
 const ImageWrapper = styled.div`
     position: relative;
-
-    &:hover { // Добавили blur картинкам при наведении
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(4px);
-        }
-
-        ${Button} {  
-            opacity: 1;  // Показываем кнопку
-        }
-    }
 
     ${Button} {
         opacity: 0;  // Изначально кнопка скрыта
@@ -69,10 +56,42 @@ const ImageWrapper = styled.div`
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        
+
         &::before {  // Псевдоэлемент (линия-прямоугольник) будет всегда 100% 
             width: 100%;
             height: 100%;
+        }
+    }
+
+    &::before { // Добавили blur картинкам при наведении
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+    }
+
+    &:hover { // Добавили blur картинкам при наведении
+        &::before {
+            opacity: 1;
+        }
+        
+        ${Button} {  
+            opacity: 1;  // Показываем кнопку
+        }
+    }
+    
+    @media ${theme.media.tablet} {
+        &::before {
+            opacity: 1;  // Показываем размытую картинку
+        }
+
+        ${Button} {
+            opacity: 1;  // Показываем кнопку
         }
     }
 `
