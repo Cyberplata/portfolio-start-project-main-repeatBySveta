@@ -28,10 +28,19 @@ export const Main:React.FC = () => {
 
                     </div>
 
-                    <S.PhotoWrapper>
-                        <S.Photo src={photo}
-                               alt=""/> {/*внутри Не парного тега мы не можем ничего создать -> создаём обертку PhotoWrapper*/}
-                    </S.PhotoWrapper>
+                    <Tilt className="parallax-effect-img"
+                          tiltMaxAngleX={40}
+                          tiltMaxAngleY={40}
+                          perspective={800}
+                          transitionSpeed={1500}
+                          scale={1.1}
+                          gyroscope={true}
+                    >
+                        <S.PhotoWrapper>
+                            <S.Photo src={photo}
+                                     alt=""/> {/*внутри Не парного тега мы не можем ничего создать -> создаём обертку PhotoWrapper*/}
+                        </S.PhotoWrapper>
+                    </Tilt>
                 </FlexWrapper>
             </Container>
         </S.Main>
