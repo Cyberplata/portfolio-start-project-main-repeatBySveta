@@ -24,6 +24,8 @@ export const Testimony: React.FC = () => {
 };
 
 const StyledTestimony = styled.section`
+    position: relative;
+    
     background-color: #d6b8f8;
     min-height: 50vh;
     
