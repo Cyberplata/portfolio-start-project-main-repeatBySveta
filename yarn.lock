@@ -7593,6 +7593,11 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-parallax-tilt@^1.7.212:
+  version "1.7.212"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.212.tgz#acaa2f5bebb6b81706822e0e0a2016b54531ae96"
+  integrity sha512-UCsJ6GUSaEMbpEr+NhAFD5SNv+iEzIqsEFdVokV348QgRSktFNJoqYvQSnGj+OwZNaby3P2bnD/+Or5263k8UQ==
+
 react-refresh@0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
@@ -8735,6 +8740,14 @@ typescript@4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
   integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
+
+typewriter-effect@^2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/typewriter-effect/-/typewriter-effect-2.21.0.tgz#7150f12fd2c188248ab2b2b031f77c0663d24c54"
+  integrity sha512-Y3VL1fuJpUBj0gS4OTXBLzy1gnYTYaBuVuuO99tGNyTkkub5CXi+b/hsV7Og9fp6HlhogOwWJwgq7iXI5sQlEg==
+  dependencies:
+    prop-types "^15.8.1"
+    raf "^3.4.1"
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
