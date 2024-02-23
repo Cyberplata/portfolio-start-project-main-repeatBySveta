@@ -46,7 +46,7 @@ const worksData = [
 ]
 
 export const Works: React.FC = () => {
-    const [currentFilterStatus, setCurrentFilterStatus] = useState("all")
+    const [currentFilterStatus, setCurrentFilterStatus] = useState<TabsStatusType>("all")
     let filteredWorks = worksData
 
     // Проверяем, совпадает ли status табменю (tabsItems) и type (worksData), если совпадают, то попадают в наш фильтер
