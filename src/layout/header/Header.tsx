@@ -6,7 +6,6 @@ import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from "./Header_Styles";
 
-const items = ["Home", "Skills", "Works", "Testimony", "Contact"]
 
 export const Header: React.FC = () => { // Refactoring - add React.FC (function component)
 
@@ -27,8 +26,8 @@ export const Header: React.FC = () => { // Refactoring - add React.FC (function 
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
 
-                    {width < breakpoint ? <MobileMenu menuItems={items}/> // Refactor
-                                        : <DesktopMenu menuItems={items}/>}
+                    {width < breakpoint ? <MobileMenu /> // Refactor
+                                        : <DesktopMenu />}
 
                 </FlexWrapper>
             </Container>

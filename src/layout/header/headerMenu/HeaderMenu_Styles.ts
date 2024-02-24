@@ -1,13 +1,10 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
-// Menu
-const Link = styled.a`
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    text-align: center;
-    color: transparent; // Убираем обводку у букв
+
+const MenuItem = styled.li`
+    position: relative;
 `
 
 const Mask = styled.span`
@@ -29,39 +26,46 @@ const Mask = styled.span`
     }
 `
 
-const MenuItem = styled.li`
-    position: relative;
-    
+
+// Menu
+const NavLink = styled(Link)`
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: transparent; // Убираем обводку у букв
+
     &::before {
         content: "";
         display: inline-block;
         height: 3px;
         background-color: ${theme.colors.accent};
-        
+
         position: absolute;
         top: 50%;  // Выравниваем полоску по центру слов + чтобы она выходила на 10px по бокам
         left: -10px;
         right: -10px;
         z-index: 1;
-        
+
         transform: scale(0);  // делаем линию по дефолту невидимой
     }
-    
-    &:hover {
+
+    &:hover, &.active {
         &::before {
             transform: scale(1); // при наведении линия становится видимой
         }
-        
+
         ${Mask} {
             transform: skewX(12deg) translateX(5px); // наклоняет буквы по оси Х на 12градусов влево и сдвигает верхнюю Маску вправо на 5px
             color: ${theme.colors.font};
-            
+
             & + ${Mask} {
                 transform: skewX(12deg) translateX(-5px); // тоже самое только для других-нижних Масок и сдвигает влево на 5px
             }
         }
     }
 `
+
 
 // Mobile Menu
 
@@ -156,7 +160,7 @@ const DesktopMenu = styled.nav`
 `
 
 export const S = {
-    Link,
+    NavLink,
     Mask,
     MenuItem,
     MobileMenu,

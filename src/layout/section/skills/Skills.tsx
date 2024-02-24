@@ -41,7 +41,7 @@ const skillData = [ // Refactoring добавили массив объекто�
 
 export const Skills = () => {
     return (
-        <S.Skills>
+        <S.Skills id={"skills"}>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
