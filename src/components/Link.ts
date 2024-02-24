@@ -28,6 +28,8 @@ export const Link = styled.a<{active?: boolean}>`
         left: 0;  // 0, а не -10px, потому что полоска будет отчитывать свои координаты от паддинга ссылки
         right: 0;
         z-index: -1;
+        height: 0;
+        transition: ${theme.animations.transition};
         
         ${props => props.active && css<{active?: boolean}>`
             height: 10px;

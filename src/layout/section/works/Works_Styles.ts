@@ -39,7 +39,8 @@ const ImageWrapper = styled.div`
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -40%);
+        transition: ${theme.animations.transition};
 
         &::before {  // Псевдоэлемент (линия-прямоугольник) будет всегда 100% 
             width: 100%;
@@ -55,8 +56,9 @@ const ImageWrapper = styled.div`
         top: 0;
         bottom: 0;
         background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(2px);
         opacity: 0;
+        transition: ${theme.animations.transition};
     }
 
     &:hover { // Добавили blur картинкам при наведении
@@ -66,6 +68,7 @@ const ImageWrapper = styled.div`
         
         ${Button} {  
             opacity: 1;  // Показываем кнопку
+            transform: translate(-50%, -50%);
         }
     }
     
