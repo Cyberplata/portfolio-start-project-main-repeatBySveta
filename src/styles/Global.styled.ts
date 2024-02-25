@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.font};
         line-height: 1.2;
         
-        min-width: 360px; // Минимальная ширина для мобилок, чтобы не было бело полоски
+        min-width: 360px; // Минимальная ширина для мобилок, чтобы не было белой полоски
     }
     
     a {

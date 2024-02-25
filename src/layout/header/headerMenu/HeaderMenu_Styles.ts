@@ -100,7 +100,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: translateY(0);
         
-        // Добавили чтобы наши ссылки плано растягивались
+        // Добавили чтобы наши ссылки плавно растягивались
         & ul {
             gap: 40px;
         }
