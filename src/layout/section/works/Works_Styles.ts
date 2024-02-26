@@ -3,6 +3,7 @@ import {theme} from "../../../styles/Theme";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Link} from "../../../components/Link";
 import {Button} from "../../../components/Button";
+import {motion} from "framer-motion";
 
 
 const Works = styled.section`
@@ -13,10 +14,11 @@ const Works = styled.section`
     }
 `
 
+// Мы можем создать компонент Work, который будет сразу анимирован const Work = styled(motion.div), но сделаем по другому
 const Work = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    width: 330px;
-    flex-grow: 1;
+    //width: 330px;
+    //flex-grow: 1;
 
     ${Link} {
         padding: 10px 0; // Сделали линию от начала текста
@@ -26,9 +28,9 @@ const Work = styled.div`
         }
     }
     
-    @media ${theme.media.desktop} {
+    /*@media ${theme.media.desktop} {
         max-width: 540px; // Максимальная ширина будет ограничиваться только на desktop, когда ширина будет больше 1140px
-    }
+    }*/
 `
 
 const ImageWrapper = styled.div`
